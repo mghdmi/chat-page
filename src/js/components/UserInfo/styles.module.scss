@@ -1,0 +1,35 @@
+@import 'library/library';
+@import 'base/typography';
+
+.user {
+	display: flex;
+	align-items: center;
+}
+
+.userInfo {
+	margin-left: rem(10);
+}
+
+.userStatus {
+	font-size: rem(12);
+}
+
+.avatar {
+	width: rem(32);
+	height: rem(32);
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center center;
+	background-image: url(../../../assets/profile.svg);
+}
+
+.avatarLarge {
+	width: rem(64);
+	height: rem(64);
+}
+
+.userName {
+	font-size: rem(14);
+	@extend %type-bold;
+	color: color(gray_54);
+}

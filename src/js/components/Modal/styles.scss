@@ -1,0 +1,64 @@
+@import 'library/library';
+@import 'base/typography';
+
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(color(blue_39), 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+	pointer-events: none;
+	padding: rem(20);
+}
+
+.modal.enter-done {
+	opacity: 1;
+	pointer-events: visible;
+}
+
+.modal.exit {
+	opacity: 0;
+}
+
+.modalContent {
+	max-width: rem(600);
+	width: 100%;
+	background-color: #fff;
+	border-radius: rem(6);
+	overflow: hidden;
+}
+
+.modalHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: rem(15) rem(20);
+	background: color(gray_f2);
+}
+
+.modalTitle {
+	font-size: rem(18);
+	@extend %type-semiBold;
+	color: color(blue_30);
+}
+
+.modalBody {
+}
+
+.buttonClose {
+	font-size: rem(14);
+	padding: rem(5);
+	transition: color 0.15s;
+
+	@include mq_min($sm) {
+		&:hover {
+			color: color(red_f7);
+		}
+	}
+}

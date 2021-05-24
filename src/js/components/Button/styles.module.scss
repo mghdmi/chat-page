@@ -1,0 +1,23 @@
+@import 'library/library';
+@import 'base/typography';
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	background: color(blue_30);
+	padding: rem(5) rem(10);
+	@extend %type-bold;
+	font-size: rem(18);
+	border: 1px solid color(blue_30);
+	border-radius: 0 rem(6) rem(6) 0;
+	transition: background 0.15s, border-color 0.15s;
+}
+
+.disabled {
+	border-color: color(gray_c);
+	background: color(gray_c);
+	cursor: not-allowed;
+}

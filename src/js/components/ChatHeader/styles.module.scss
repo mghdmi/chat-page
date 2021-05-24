@@ -1,0 +1,19 @@
+@import 'library/library';
+@import 'base/typography';
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: rem(15) rem(20);
+	cursor: pointer;
+	box-shadow: 0 rem(5) rem(15) rgba(color(blue_51), 0.05);
+	border-bottom: rem(2) solid transparent;
+	transition: border-color 0.15s;
+
+	@include mq_min($sm) {
+		&:hover {
+			border-bottom: rem(2) solid color(blue_30);
+		}
+	}
+}

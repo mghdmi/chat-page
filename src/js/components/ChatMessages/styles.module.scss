@@ -1,0 +1,31 @@
+@import 'library/library';
+@import 'base/typography';
+
+.messages {
+	flex: 1;
+	padding: rem(10) rem(20) rem(10) rem(20);
+	overflow: auto;
+}
+
+.message {
+	display: flex;
+	margin: rem(10) 0;
+}
+
+.messageFromMe {
+	justify-content: flex-end;
+}
+
+.messageContent {
+	padding: rem(10);
+	border-radius: rem(6);
+	color: #fff;
+	@extend %type-semiBold;
+	white-space: pre-line;
+	background: color(blue_30);
+
+	.messageFromMe & {
+		background: color(gray_f2);
+		color: color(blue_30);
+	}
+}

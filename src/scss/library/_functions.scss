@@ -1,0 +1,23 @@
+/**
+ * return hex code of color maps
+ * maps is placed in _vars.scss
+ * @param  {string} $key color name
+ * @return {string}      color hex
+ */
+@function color($key) {
+	@if map-has-key($colors, $key) {
+		@return map-get($colors, $key);
+	}
+
+	@warn "Unknown `#{$key}` in $colors.";
+	@return null;
+}
+
+/**
+ * generate rem size
+ * @param  {number} $pxsize
+ * @return {string}
+ */
+@function rem($pxsize) {
+	@return ($pxsize/16) + rem;
+}

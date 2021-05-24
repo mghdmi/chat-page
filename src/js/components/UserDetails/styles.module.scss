@@ -1,0 +1,22 @@
+@import 'library/library';
+@import 'base/typography';
+
+.userDetails {
+	padding: rem(20);
+}
+
+.bioWrap {
+	margin-top: rem(20);
+}
+
+.bio {
+	font-size: rem(16);
+	color: color(gray_54);
+	margin-top: rem(5);
+}
+
+.about {
+	font-size: rem(18);
+	color: color(blue_30);
+	@extend %type-semiBold;
+}

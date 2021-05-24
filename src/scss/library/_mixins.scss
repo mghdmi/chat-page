@@ -1,0 +1,14 @@
+/**
+ * media queries
+ * @param  {int} $width
+ */
+@mixin mq_max($width) {
+	@media only screen and (max-width: $width) {
+		@content;
+	}
+}
+@mixin mq_min($width) {
+	@media only screen and (min-width: $width + 1) {
+		@content;
+	}
+}

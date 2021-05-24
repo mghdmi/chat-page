@@ -1,0 +1,27 @@
+@import 'library/library';
+
+.chatInputBox {
+	display: flex;
+	padding: rem(15) rem(20);
+	box-shadow: 0 rem(-5) rem(15) rgba(color(blue_51), 0.05);
+}
+
+.chatInput {
+	width: 100%;
+	padding: rem(8);
+	border-radius: rem(6) 0 0 rem(6);
+	border: rem(2) solid color(gray_c);
+	min-height: rem(50);
+	resize: none;
+	overflow: auto;
+	transition: border-color 0.15s;
+	color: color(gray_54);
+
+	&::placeholder {
+		font-size: rem(14);
+	}
+	&:focus {
+		border-color: color(blue_30);
+		border-right-color: none;
+	}
+}
